@@ -1,2 +1,5 @@
-# Expression_Processing
-24 laboratory work in computer science | Second semester
+# Expression processing
+### The task №18:
+Removal of the unary minus from multiplication
+### Algorithm:
+-------------
