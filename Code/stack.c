@@ -1,7 +1,6 @@
 #include <stdlib.h>
-#include <stdio.h>
-
 #include "stack.h"
+#include <stdio.h>
 
 void stack_create(Stack* stack) {
 	stack->head = NULL;
