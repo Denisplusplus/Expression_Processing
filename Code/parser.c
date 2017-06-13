@@ -9,7 +9,7 @@ int is_number(char value) {
   return value >= '0' && value <= '9';
 }
 
-int is_operation(char value) {
+int is_operation( char value) {
   return (value == '+' || value == '-' || value == '*' ||
           value == '/' || value == '^');
 }
@@ -33,7 +33,7 @@ Priority operation_priority(char operation) {
   return ERR;
 }
 
-void post_order( char* input, Stack* stack) {
+void post_order(char* input, Stack* stack) {
   int i = 0;
   Token token = {
     '\0',
@@ -72,7 +72,7 @@ void post_order( char* input, Stack* stack) {
     } else if ( is_opening_bracket(input[i]) ) {
       token.operation = input[i];
       token.number = 0;
-      stackPush(&operation_stack, &token);
+      stack_push(&operation_stack, &token);
     } else if ( is_closing_bracket(input[i]) ) {
       while ( !stack_is_empty(&operation_stack) && 
               stack_top(&operation_stack).operation != '(') {
