@@ -1,16 +1,16 @@
 #ifndef TOKEN_H
 #define TOKEN_H
 
-typedef enum operation_category {
+typedef enum Operation_category {
   UNARY,
   BINARY,
   BRACKET
-} operation_category;
+} Operation_category;
 
 typedef struct Token {
   char operation;
   int number;
-  operation_category category;
+  Operation_category category;
 } Token;
 
 #endif
